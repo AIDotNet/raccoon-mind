@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "type": "completion",
+  "description": "知识图谱生成助手",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 8000,
+      "temperature": 0
+    },
+    "gpt-4o-mini": {
+      "model_id": "gpt-4o-mini",
+      "max_tokens": 8000,
+      "temperature": 0.5
+    },
+    "gpt-4": {
+      "model_id": "gpt-4o",
+      "max_tokens": 8000,
+      "temperature": 0.5
+    }
+  },
+  "input_variables": [
+    {
+      "name": "demand",
+      "description": "用户需求",
+      "required": true
+    }
+  ]
+}

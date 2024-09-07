@@ -1,0 +1,6 @@
+﻿services:
+  raccoon-mind-service:
+    image: registry.token-ai.cn/ai-dotnet/raccoon-mind-service:latest
+    build:
+      context: .
+      dockerfile: src/RaccoonMind.Service/Dockerfile

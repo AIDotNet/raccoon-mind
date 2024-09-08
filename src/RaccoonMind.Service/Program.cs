@@ -20,6 +20,7 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseResponseCompression();
+
 app.Use((async (context, next) =>
 {
     await next(context);

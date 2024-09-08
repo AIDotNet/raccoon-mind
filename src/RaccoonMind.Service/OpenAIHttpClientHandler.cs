@@ -18,6 +18,9 @@ public sealed class OpenAIHttpClientHandler : HttpClientHandler
             new Uri(request.RequestUri.ToString()
                 .Replace("https://api.openai.com", OpenAIOptions.Endpoint.TrimEnd('/')));
 
+        // 删除userAgent
+        request.Headers.Remove("User-Agent");
+        request.Headers.Add("User-Agent", "Raccoon-Mind");
         request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token.Value);
         var result = await base.SendAsync(request, cancellationToken);
 
